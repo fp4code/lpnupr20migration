@@ -23,8 +23,8 @@ Les lignes d'un bloc de citation sont précédées de >
 > Excepteur sint occaecat cupidatat non proident,
 > sunt in culpa qui officia deserunt mollit anim id est laborum
 
-Un *texte en italique* et un **autre en gras**
-ainsi qu'une autre _mise en relief_.
+Un *texte en italique* et _un autre aussi_.
+Un **texte en gras** et __un autre aussi__.
 
 Une liste
 
@@ -54,7 +54,22 @@ On la triple pour un ensemble de lignes
 ```
 import numpy as np
 a = np.arange(10)
+def foo:
+  if not bar:
+    return true
 ```
+
+On peut rendre ces lignes de code plus belles
+
+```python
+import numpy as np
+a = np.arange(10)
+def foo:
+  if not bar:
+    return true
+```
+
+
 
 La syntaxe des liens c'est crochets puis parenthèses.
 Ainsi pour la [racine de ce dépôt](https://github.com/fp4code/lpnupr20migration).
