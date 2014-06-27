@@ -1,4 +1,4 @@
-Installation d'un environnement python 2.7.6 et de ipython
+# Installation d'un environnement python 2.7.6 et de ipython
 
 ```bash
 virtualenv env
@@ -6,7 +6,7 @@ source env/bin/activate
 pip install /local/src/ipython-2.1.0.tar.gz
 ```
 
-Installation minimale de django-cms et de djangocms-installer
+# Installation minimale de django-cms et de djangocms-installer.
 
 ```bash
 cat >| install.sh <<EOF
@@ -44,4 +44,48 @@ pip install -e git+file:/local/git/github.com/etianen/django-reversion@release-1
 EOF
 
 bash install.sh
+```
+
+La compilation de Pillow a pu demander l'installation de bibliothèques graphiques.
+
+```
+    --------------------------------------------------------------------
+    PIL SETUP SUMMARY
+    --------------------------------------------------------------------
+    version      Pillow 2.4.0
+    platform     linux2 2.7.6 (default, Mar 22 2014, 22:59:56)
+                 [GCC 4.8.2]
+    --------------------------------------------------------------------
+    --- TKINTER support available
+    --- JPEG support available
+    *** OPENJPEG (JPEG2000) support not available
+    --- ZLIB (PNG/ZIP) support available
+    --- LIBTIFF support available
+    --- FREETYPE2 support available
+    --- LITTLECMS2 support available
+    --- WEBP support available
+    --- WEBPMUX support available
+    --------------------------------------------------------------------
+```
+
+# Base de données PostgreSQL
+
+```bash
+
+sudo su - postgres
+#
+B=base_django05
+#
+dropdb $B
+dropuser $B
+dropuser $USER
+#
+psql -U postgres template1 -c "CREATE ROLE $B NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT NOLOGIN;"
+psql -U postgres template1 -c "CREATE ROLE $USER NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT LOGIN;"
+psql -U postgres template1 -c "GRANT $B TO $USER;"
+psql -U postgres template1 -c "CREATE DATABASE $B WITH OWNER=$USER;"
+psql -U postgres template1 -c "REVOKE ALL ON DATABASE $B FROM public;"
+psql -U postgres $B        -c "GRANT ALL ON SCHEMA public TO $USER WITH GRANT OPTION;"
+#
+logout
 ```
