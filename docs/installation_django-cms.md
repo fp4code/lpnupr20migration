@@ -1,4 +1,4 @@
-# Installation d'un environnement python 2.7.6 et de ipython
+### Installation d'un environnement python 2.7.6 et de ipython
 
 ```bash
 virtualenv env
@@ -6,7 +6,7 @@ source env/bin/activate
 pip install /local/src/ipython-2.1.0.tar.gz
 ```
 
-# Installation minimale de django-cms et de djangocms-installer.
+### Installation minimale de django-cms et de djangocms-installer.
 
 ```bash
 cat >| install.sh <<EOF
@@ -68,7 +68,7 @@ La compilation de Pillow a pu demander l'installation de bibliothèques graphiqu
     --------------------------------------------------------------------
 ```
 
-# Base de données PostgreSQL
+### Base de données PostgreSQL
 
 ```bash
 
