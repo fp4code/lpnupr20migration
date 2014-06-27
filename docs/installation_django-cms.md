@@ -89,3 +89,11 @@ psql -U postgres $B        -c "GRANT ALL ON SCHEMA public TO $USER WITH GRANT OP
 #
 logout
 ```
+
+### création du site django-cms
+
+```bash
+rm -rf manage.py my_site static
+djangocms -n -p . my_site --no-input --no-deps --db postgres:///base_django05 --cms-version 3.0 --django-version 1.6 --i18n yes \
+--reversion no --languages fr,en --timezone Europe/Paris --use-tz yes --permissions yes --bootstrap yes --starting-page yes
+```
