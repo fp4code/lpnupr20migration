@@ -15,11 +15,16 @@ par le nombre de signes #
 
 Les lignes d'un bloc de citation sont précédées de >
 
-> Première ligne
-> Deuxième ligne
+> Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+> Ut enim ad minim veniam,
+> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+> Excepteur sint occaecat cupidatat non proident,
+> sunt in culpa qui officia deserunt mollit anim id est laborum
 
 Un *texte en gras* et un **autre en italique**
-ainsi que _la combinaison des deux_.
+ainsi qu'une autre _mise en relief_.
 
 Une liste
 
@@ -42,7 +47,7 @@ Pour numéroter les items
     * etc.
 3. Item 3
 
-On utilise l'apostrophe inverse pour une `police fixe`.
+On utilise l'apostrophe inverse pour une `police code fixe`.
 
 On la triple pour un ensemble de lignes
 
@@ -53,6 +58,4 @@ a = np.arange(10)
 
 La syntaxe des liens c'est crochets puis parenthèses.
 Ainsi pour la [racine de ce dépôt](https://github.com/fp4code/lpnupr20migration).
-
-
 
