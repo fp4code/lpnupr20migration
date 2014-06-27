@@ -23,7 +23,7 @@ Les lignes d'un bloc de citation sont précédées de >
 > Excepteur sint occaecat cupidatat non proident,
 > sunt in culpa qui officia deserunt mollit anim id est laborum
 
-Un *texte en gras* et un **autre en italique**
+Un *texte en italique* et un **autre en gras**
 ainsi qu'une autre _mise en relief_.
 
 Une liste
