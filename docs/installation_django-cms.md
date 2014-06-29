@@ -174,13 +174,47 @@ sed -i 's@//netdna.bootstrapcdn.com/@/static/@g' my_site/templates/base.html
 sed -i 's@http://code.jquery.com/@/static/jquery/2.1.1/@g' my_site/templates/base.html 
 ```
 
+Lancement du serveur
+
 ```bash
 python manage.py runserver 8005
 ```
 
+On a le site à l'adresse http://localhost:8005/
+
+### Interface pour le serveur nginx
+
+```bash
+pip install  git+file:/local2/git/github.com/benoitc/gunicorn@19.0
+```
 
 
+### Ajout d'applications utiles
 
-http://localhost:8005/
+```bash
+pip install git+file:/local2/git/github.com/SmileyChris/easy-thumbnails@2.0.1
+pip install git+file:/local2/git/github.com/chrisglass/django_polymorphic@v0.5.5
+pip install git+file:/local2/git/github.com/jezdez/django-appconf@v0.6
+pip install git+file:/local2/git/github.com/stefanfoulis/django-filer@0.9.6
+pip install git+file:/local2/git/github.com/stefanfoulis/cmsplugin-filer@0.9.8
+```
 
+Ajout à settings.py:
+```
+INSTALLED_APPS = (
+    ...
+    'filer',
+    'easy_thumbnails',
+    ...
+)
 
+...
+
+SOUTH_MIGRATION_MODULES = {
+    'easy_thumbnails': 'easy_thumbnails.south_migrations',
+}
+
+```
+
+```bash
+./manage.py syncdb --migrate
