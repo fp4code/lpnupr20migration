@@ -10,7 +10,7 @@ Il faut travailler sur une copie du projet
 À la page https://github.com/divio/djangocms-link on clique sur Fork.
 Cela crée https://github.com/fp4code/djangocms-link
 
-dans  $L/git/github.com/fp4code je clone :
+dans  `$L/git/github.com/fp4code` je clone :
 
 ```bash
 git clone https://github.com/fp4code/djangocms-link.git
@@ -48,7 +48,8 @@ cat env/lib/python2.7/site-packages/djangocms_link/cms_plugins.py # img/icons/pl
 Le lien apparait bien, mais seulement si on réédite plugins des pages puisque
 l'ancienne adresse cms/images/plugins est codée en dur dans chaque page de texte.
 
-Je suis satisfait de ma modification, je le mets sur le dépôt.
+Je suis satisfait de ma modification, je la fusionne avec la branche master
+et je la mets sur le dépôt.
 
 ```bash
 cd $L/git/github.com/fp4code/djangocms-link
@@ -57,7 +58,7 @@ git merge link_image_directory
 git push origin master
 ```
 
-À la page https://github.com/fp4code/djangocms-link je clique sur compare pour voir
+À la page https://github.com/fp4code/djangocms-link je clique sur Compare pour voir
 la modification.
 
 À la page https://github.com/divio/djangocms-link je clique sur Pull Requests.
